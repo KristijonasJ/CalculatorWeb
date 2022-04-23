@@ -1,0 +1,98 @@
+body {
+    background: url();
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    font-family: Arial;
+    padding: 0;
+    margin: 0;
+}
+.calculator-grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(6, 100px);
+}
+
+.calculator-grid > button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255,255,255. .75);
+}
+
+.calculator-grid > button:hover{
+    background-color: rgb(163, 163, 163, .75);
+}
+.span-two{
+    background-color: lightblue;
+}
+   
+.calculator-grid > .span-two:hover{
+    background-color: rgb(69, 163, 184);
+}
+
+.output{
+    grid-column: 1/-1;
+    background-color: rgba(212, 212, 212, 0.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.output .previous-operand{
+    color: rgba(90, 90, 90, 0.75);
+    font-size: 1.5rem;
+}
+.output .current-operand{
+    color: black;
+    font-size: 2.5rem;
+}
+.history {
+    display: none;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(6, 100px);
+    
+}
+
+.historyOutput {
+    max-height: 100%;
+    max-width: 100%;
+    grid-column-start: 1; 
+    grid-column-end: 5; 
+    grid-row-start: 1; 
+    grid-row-end: 7; 
+    background-color: rgba(212, 212, 212, 0.75);
+    padding: 40px;
+    overflow: hidden;
+    overflow-y: scroll;
+    
+}
+
+.history > button{
+    grid-column: 1/-1;
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255,255,255. .75);
+}
+
+.history > button:hover{
+    background-color: rgb(163, 163, 163, .75);
+}
+
+.history .historyOutput{
+    color: rgba(90, 90, 90, 0.75);
+    font-size: 1.5rem;
+    text-align: right;
+}
